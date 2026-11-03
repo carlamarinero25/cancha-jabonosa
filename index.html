@@ -263,31 +263,22 @@ footer a{color:#5BEA7C;font-weight:700}
 .foot-brand,.foot-contact{display:flex;flex-direction:column;gap:8px}
 @media (max-width:700px){footer .wrap{flex-direction:column;justify-content:center;text-align:center}.foot-brand,.foot-contact{align-items:center}}
 
-/* Hero y header con el verde oscuro del logo (fijo en ambos temas) */
-.top,.hero{--ink:#FFFFFF;--muted:#A9C4B6;--pitch:#3FDB63;--line:rgba(255,255,255,.22);--chip:rgba(255,255,255,.08);color:#FFFFFF}
-body::before{background:#0C2A1D}
-header.top{background:#0C2A1D;border-bottom:1px solid #0C2A1D}
-.top .btn-main{background:#3FDB63;color:#0C2A1D;box-shadow:0 4px 0 #1E8A3C}
-.hero{background:radial-gradient(120% 90% at 85% 10%,#14402A 0%,#0C2A1D 60%)}
-.hero .btn-main{background:#3FDB63;color:#0C2A1D;box-shadow:0 4px 0 #1E8A3C}
-.hero .btn-ghost{color:#FFFFFF;box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)}
-.hero .promise{background:#15A243;color:#FFFFFF}
-.hero .price-tag strong{color:#FFFFFF}
-.hero .tube{box-shadow:inset 0 -8px 0 var(--tube-sh),0 24px 50px -20px rgba(0,0,0,.7)}
+/* Hero claro y limpio; el verde oscuro del logo queda para el recuadro y el pie */
 section.band#cancha{border-top:0}
+header.top{background:color-mix(in srgb,var(--surface) 94%,transparent)}
+.hero{background:linear-gradient(180deg,var(--surface) 0%,var(--bg) 100%)}
 .hero-copy{gap:18px}
-.hero .proof strong{font-size:1.9rem}
-.hero .proof span{color:#A9C4B6}
-.hero .price-tag small{color:#A9C4B6}
-@media (max-width:560px){.hero .cta-row{flex-wrap:nowrap;gap:8px}.hero .cta-row .btn{flex:1;padding:.85em .6em;font-size:.92rem;white-space:nowrap}.hero .cta-row .btn-ghost{font-size:0}.hero .cta-row .btn-ghost::after{content:"Ver precios";font-size:.92rem}}
-.hero .lead{color:#FFFFFF;font-size:clamp(1.1rem,1.6vw,1.28rem);font-weight:500;line-height:1.5}
-.hero .only{color:#C9DDD2;font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:.04em;margin-top:-6px}
-.hero .eyebrow{color:#FFFFFF;text-shadow:0 0 10px rgba(63,219,99,.75),0 2px 4px rgba(0,0,0,.6)}
-.hero .promise{padding:13px 16px;gap:2px 12px}
+.hero .eyebrow{color:var(--pitch);letter-spacing:.16em}
+.hero .only{color:var(--muted);font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:.04em;margin-top:-6px}
+.hero .promise{background:#0C2A1D;color:#FFFFFF;padding:13px 16px;gap:2px 12px}
 .hero .promise svg{width:34px;height:34px}
-.hero .promise .p1{font-size:.92rem}
+.hero .promise svg g{stroke:#3FDB63}
+.hero .promise svg circle[fill]{fill:#3FDB63}
+.hero .promise .p1{font-size:.92rem;color:#C9DDD2;opacity:1}
 .hero .promise .p2{font-size:1.08rem}
-@media (max-width:560px){.hero .promise .p1{font-size:.85rem}.hero .promise .p2{font-size:.98rem}.hero .promise svg{width:28px;height:28px}}
+.hero .proof strong{font-size:1.9rem}
+@media (max-width:560px){.hero .promise .p1{font-size:.85rem}.hero .promise .p2{font-size:.98rem}.hero .promise svg{width:28px;height:28px}
+  .hero .cta-row{flex-wrap:nowrap;gap:8px}.hero .cta-row .btn{flex:1;padding:.85em .6em;font-size:.92rem;white-space:nowrap}.hero .cta-row .btn-ghost{font-size:0}.hero .cta-row .btn-ghost::after{content:"Ver precios";font-size:.92rem}}
 
 /* Barra fija móvil */
 .mbar{display:none}
@@ -883,7 +874,7 @@ render();
   const ctx = cv.getContext("2d"); let W,H,bs=[];
   function size(){ const r=cv.getBoundingClientRect(); W=cv.width=r.width*devicePixelRatio; H=cv.height=r.height*devicePixelRatio; }
   size(); addEventListener("resize",size);
-  for(let i=0;i<26;i++) bs.push({x:Math.random(),y:Math.random(),r:4+Math.random()*16,s:.0004+Math.random()*.0009,w:Math.random()*6,c:Math.random()<.55?"#3FDB63":"#C9D2D5",a:.3+Math.random()*.25});
+  for(let i=0;i<26;i++) bs.push({x:Math.random(),y:Math.random(),r:4+Math.random()*16,s:.0004+Math.random()*.0009,w:Math.random()*6,c:Math.random()<.5?"#15A243":"#8E9A9F",a:.16+Math.random()*.16});
   function tick(t){
     ctx.clearRect(0,0,W,H);
     bs.forEach(b=>{
