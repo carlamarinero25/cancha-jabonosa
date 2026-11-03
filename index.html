@@ -275,8 +275,13 @@ header.top{background:#0C2A1D;border-bottom:1px solid #0C2A1D}
 .hero .price-tag strong{color:#FFFFFF}
 .hero .tube{box-shadow:inset 0 -8px 0 var(--tube-sh),0 24px 50px -20px rgba(0,0,0,.7)}
 section.band#cancha{border-top:0}
+.hero-copy{gap:18px}
+.hero .proof strong{font-size:1.9rem}
+.hero .proof span{color:#A9C4B6}
+.hero .price-tag small{color:#A9C4B6}
+@media (max-width:560px){.hero .cta-row{flex-wrap:nowrap;gap:8px}.hero .cta-row .btn{flex:1;padding:.85em .6em;font-size:.92rem;white-space:nowrap}.hero .cta-row .btn-ghost{font-size:0}.hero .cta-row .btn-ghost::after{content:"Ver precios";font-size:.92rem}}
 .hero .lead{color:#FFFFFF;font-size:clamp(1.1rem,1.6vw,1.28rem);font-weight:500;line-height:1.5}
-.hero .only{color:#FFFFFF;font-size:clamp(1.65rem,3.2vw,2.15rem)}
+.hero .only{color:#C9DDD2;font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:.04em;margin-top:-6px}
 .hero .eyebrow{color:#FFFFFF;text-shadow:0 0 10px rgba(63,219,99,.75),0 2px 4px rgba(0,0,0,.6)}
 .hero .promise{padding:13px 16px;gap:2px 12px}
 .hero .promise svg{width:34px;height:34px}
@@ -308,7 +313,7 @@ section.band#cancha{border-top:0}
   .logo-wm{height:48px}
   .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:25;gap:10px;background:var(--surface);border-top:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
   .mbar .btn{flex:1;padding:.85em 1em}
-  footer{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
+  footer{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}#bubbles{display:none}}
 </style>
@@ -329,9 +334,8 @@ section.band#cancha{border-top:0}
     <div class="hero-copy">
       <span class="eyebrow">La única cancha jabonosa de San Juan</span>
       <h1>El partido más resbaloso<em>de tu vida.</em></h1>
-      <p class="lead">Llevamos la cancha inflable de 14 × 6 metros a tu cumple, fiesta de egresados, despedida o evento al aire libre.</p>
-      <p class="only">No vas a encontrar otra igual en la provincia.</p>
       <p class="promise"><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="2.5"><circle cx="15" cy="23" r="10"/><circle cx="29" cy="12" r="6"/><circle cx="31" cy="30" r="3.5"/></g><circle cx="11.5" cy="19.5" r="2.4" fill="#fff"/></svg><span class="p1">Nosotros la armamos y la llenamos de espuma.</span><span class="p2">Vos solo te encargás de divertirte y pasarla bien.</span></p>
+      <p class="only">No vas a encontrar otra igual en la provincia.</p>
       <div class="price-tag"><s class="num">$200.000</s><strong class="num">$185.000</strong><span>Reservando con seña</span><small class="num">Seña del 50%: $92.500 · Evento de 4 horas y media</small></div>
       <div class="cta-row">
         <a class="btn btn-main" href="#reservar">Ver fechas libres</a>
@@ -614,7 +618,6 @@ section.band#cancha{border-top:0}
   </div>
 </footer>
 
-<div class="mbar"><a class="btn btn-ghost" href="#precios">Precios</a><a class="btn btn-main" href="#reservar">Reservar</a></div>
 
 <script>
 /* ==========================================================
